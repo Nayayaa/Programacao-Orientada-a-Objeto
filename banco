@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Criar void para realizar as funçôes de cada case
+
+int main() {
+    string nome, cpf, endereco, telefone;
+    double saldo = 0.0;
+    char opcao = '0'; // Inicializar com uma opção inválida para entrar no loop
+    
+    while (opcao != '5') {
+        cout << "Escolha uma opção:" << endl;
+        cout << "1. Criar nova conta" << endl;
+        cout << "2. Realizar saque" << endl;
+        cout << "3. Realizar depósito" << endl;
+        cout << "4. Mostrar saldo" << endl;
+        cout << "5. Sair do programa" << endl;
+        cout << "Opção: ";
+        cin >> opcao;
+        
+        if (opcao != '1' && opcao != '2' && opcao != '3' && opcao != '4' && opcao != '5') {
+            cout << "Opção inválida, por favor escolha as opções de 1 a 5" << endl;
+        } else {
+            switch (opcao) {
+                case '1':
+                    cout << "Digite o nome: ";
+                    cin >> nome;
+                    cout << "Digite o CPF: ";
+                    cin >> cpf;
+                    cout << "Digite o endereço: ";
+                    cin >> endereco;
+                    cout << "Digite o telefone: ";
+                    cin >> telefone;
+                    cout << "Digite o saldo inicial: ";
+                    cin >> saldo;
+                    cout << "Conta criada com sucesso." << endl;
+                    break;
+                case '2':
+                    double saque;
+                    
+                    cout << "Digite o valor para saque: " << endl;
+                    cin >> saque;
+                    saldo += saque;
+                    cout << "Saque de R$" << saque << " realizado com sucesso. Novo saldo: R$" << saldo << endl;
+                    break;
+                case '3':
+                    // Código para depósito
+                    break;
+                case '4':
+                    // Código para verificar saldo
+                    break;
+                case '5':
+                    cout << "Programa encerrado" << endl;
+                    break;
+                default:
+                    cout << "Opção inválida, tente novamente!" << endl;
+            }
+        }
+    }
+    
+    return 0;
+}
