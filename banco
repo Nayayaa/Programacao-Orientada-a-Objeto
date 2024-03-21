@@ -42,7 +42,7 @@ int main() {
                     
                     cout << "Digite o valor para saque: " << endl;
                     cin >> saque;
-                    saldo += saque;
+                    saldo -= saque;
                     cout << "Saque de R$" << saque << " realizado com sucesso. Novo saldo: R$" << saldo << endl;
                     break;
                 case '3':
